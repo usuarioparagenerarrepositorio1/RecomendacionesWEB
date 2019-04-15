@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PHP | Recomendaciones</title>
+</head>
+<body>
+  <h1>Recomendaciones de Buenas Practicas PHP</h1>
+  <ol>
+    <li>Cuando se hace una petición get, post, put, ..., siempre poner como respuesta un console.log(response) o alert(response), esto para ver la situación de tu petición como prueba inicial.</li>
+  </ol>
+  <input type="datetime-local" name="datelocal" id="datelocal" value="fechaEdit" onchange="fechaNumero()"/>
+  <input type="date" name="date" id="date" />
+  <input type="datetime" name="datetime" id="datetime" />
+  <div id="demo"></div>
+
+</body>
+<script>
+'use strict';
+let d = document;
+let fechaEdit = new Date(Date.now() - 18000000).toISOString().slice(0, -8);
+d.getElementById('datelocal').value = fechaEdit;
+
+let fechaNumero = () => {
+  let valorInput = d.getElementById('datelocal').value;
+  let demo = d.getElementById('demo');
+  demo.innerHTML = Number(new Date(valorInput));
+}
+</script>
+</html>

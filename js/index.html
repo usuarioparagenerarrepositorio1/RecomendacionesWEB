@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Buenas Prácticas | Javascript</title>
+</head>
+<body>
+    <div class="bg bg-dark text-white text-center p-5">
+      <h1>Recomendaciones de Buenas Prácticas para el uso de Javascript</h1>
+      <div class="pb-3"></div>
+      <center>
+        <div class="btn btn-outline-warning" onclick="print();">Imprimir</div>
+      </center>
+    </div>
+    
+      
+  <div class="container">
+    <ul class="list-group">
+      
+      <li class="list-group-item">
+        <span class="badge badge-secondary">1</span>
+        La ventaja de un archivo separado es que el navegador lo descargará y lo almacenará en su caché.
+        <br>
+        <div class="cromo">
+          <pre id="cromo1" class="bg bg-dark text-white cromo"></pre>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <span class="badge badge-primary">2</span>
+        Una sola etiqueta "script" no puede tener tanto el atributo "src" como el código dentro.
+      </li>
+      <li class="list-group-item">
+        <span class="badge badge-warning">3</span>
+        En cada instrucción poner al final simpre <b>";"</b>. Estos casos son la prueba:
+        <div class="cromo">
+          <pre id="cromo2" class="bg bg-dark text-white cromo"></pre>
+        </div>
+        En el primer caso el código se ejecuta como si estuviera dando los elementos de array del primer alert. <br/>
+        En el segundo caso el <strong>return</strong> se interpreta con <strong>;</strong> al final, significa, que las demas instrucciones no se ejecutan.
+      </li>
+      <li class="list-group-item">
+        <span class="badge badge-dark">4</span>
+        Los comentarios anidados no son compatibles! Puede que no haya /*...*/dentro de otro /*...*/.
+      </li>
+      <li class="list-group-item">
+        <span class="badge badge-success">5</span>
+        <strong>'use strict'</strong> obligatorio en la parte superior y recomendable su uso para la evaluación del navegador con los estándares modernos.
+        En la consola del navegador por el auto <strong>Shift + Enter</strong> no funciona <strong>'use strict'</strong>. Esta es la única forma:
+        <div class="cromo">
+          <pre id="cromo5" class="bg bg-dark text-white cromo"></pre>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <span class="badge badge-light">5</span>
+        
+      </li>
+
+  </div>
+    
+  </ul>
+
+  <script src="./script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
